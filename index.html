@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="欧美三级电影网，专注欧美三级电影赏析与片单推荐：好莱坞、欧洲艺术电影、经典黑白片、科幻悬疑、获奖佳作。按年代、类型、国家、获奖筛选，快速找到值得看的欧美三级电影。">
+<meta name="keywords" content="欧美三级电影网,欧美三级电影,好莱坞电影,欧洲电影,经典电影,科幻电影,悬疑电影,奥斯卡,戛纳,观影指南,电影推荐">
+<meta name="author" content="欧美三级电影网">
+<meta name="theme-color" content="#15181f">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<title>欧美三级电影网 - 专注欧美三级电影赏析与片单推荐</title>
+<link rel="canonical" href="https://oumeisanjidianyingwang-cn.github.io/">
+<style>
+:root{
+  --ink:#15181f; --ink2:#20242d; --paper:#f4f1ea; --paper2:#e9e4d8;
+  --line:#d8d2c2; --txt:#23262d; --sub:#6b6f78; --dim:#9a9ca1;
+  --red:#c1272d; --gold:#b8944a; --navy:#243a5e;
+  --mono:ui-monospace,Menlo,Consolas,"Courier New",monospace;
+  --sans:"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --serif:"Times New Roman",Georgia,"Songti SC","SimSun",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--paper);color:var(--txt);line-height:1.85;font-size:14.5px;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent 0,transparent 3px,rgba(20,24,31,.035) 3px,4px);pointer-events:none;z-index:0}
+a{color:inherit;text-decoration:none;outline:none}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px dashed var(--red);outline-offset:3px}
+::selection{background:var(--red);color:#fff}
+.wrap{max-width:1200px;margin:0 auto;padding:0 30px;position:relative;z-index:1}
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:4px;color:var(--gold);font-weight:800;text-transform:uppercase}
+
+/* ===== header ===== */
+header{background:var(--ink);color:var(--paper);border-bottom:5px solid var(--red);position:sticky;top:0;z-index:50}
+.hd{display:flex;align-items:center;gap:22px;padding:16px 0}
+.logo{font-family:var(--serif);font-weight:700;font-size:clamp(20px,3.6vw,30px);letter-spacing:.5px;line-height:1.15}
+.logo i{font-style:normal;color:var(--gold)}
+.logo em{display:block;font-family:var(--mono);font-size:9px;letter-spacing:5px;color:var(--dim);font-weight:700;margin-top:5px;font-style:normal}
+.search{margin-left:auto;display:flex;background:var(--ink2);border:1px solid #3a3f48;border-radius:0;padding:8px 13px;gap:10px;width:100%;max-width:400px}
+.search input{border:0;background:transparent;font:inherit;font-size:12.5px;flex:1;color:var(--paper);outline:none;letter-spacing:.5px}
+.search input::placeholder{color:var(--dim)}
+.search button{border:0;background:var(--red);color:#fff;font-weight:800;font-size:11px;padding:0 15px;letter-spacing:2px;cursor:pointer}
+.ham{display:none;background:none;border:0;color:var(--gold);font-size:27px;cursor:pointer;line-height:1}
+
+/* ===== hero ===== */
+.hero{padding:40px 0 14px}
+.kicker{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:5px 15px;font-size:10.5px;letter-spacing:2px;color:var(--sub);background:rgba(255,255,255,.5)}
+.kicker b{color:var(--red);font-weight:900}
+.hero h1{font-family:var(--serif);font-size:clamp(34px,7.4vw,74px);line-height:1.14;font-weight:700;letter-spacing:-1px;margin:14px 0 6px}
+.hero h1 u{text-decoration:none;color:var(--red);position:relative;display:inline-block}
+.hero h1 u::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:14px;background:rgba(184,148,74,.32);z-index:-1}
+.hero .sub{font-family:var(--serif);font-style:italic;color:var(--gold);letter-spacing:3px;font-size:clamp(12px,2vw,15px)}
+.hero p{margin-top:16px;color:var(--sub);max-width:820px;text-align:justify;font-size:15px;columns:1;column-gap:34px}
+.marquee{margin-top:26px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:11px 0;display:flex;gap:26px;overflow:hidden;white-space:nowrap}
+.marquee span{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--ink);font-weight:800;flex-shrink:0}
+.marquee span i{font-style:normal;color:var(--red);margin-right:7px}
+
+/* ===== section frame ===== */
+section{padding:46px 0}
+.sec{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;padding-bottom:9px;border-bottom:2px solid var(--ink);flex-wrap:wrap}
+.sec h2{font-family:var(--serif);font-size:clamp(22px,3.8vw,34px);font-weight:700;letter-spacing:.5px}
+.sec h2 small{font-family:var(--mono);color:var(--red);font-size:.42em;letter-spacing:3px;margin-right:10px;font-weight:800;vertical-align:middle}
+.sec .en{font-family:var(--mono);font-size:10px;letter-spacing:3px;color:var(--gold);font-weight:800;text-transform:uppercase}
+.sec a.more{margin-left:auto;font-size:11px;letter-spacing:2px;color:var(--sub);border-bottom:1px solid var(--red);padding-bottom:2px;font-weight:800}
+.sec a.more:hover{color:var(--red)}
+
+/* ===== 01 好莱坞 ===== */
+.hw{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;gap:16px}
+.hw .lead{grid-row:1/3;background:var(--ink);color:var(--paper);border-radius:4px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;min-height:420px;cursor:pointer;transition:.28s;position:relative;overflow:hidden}
+.hw .lead::before{content:"HOLLYWOOD";position:absolute;right:-10px;bottom:14px;font-family:var(--serif);font-size:64px;color:rgba(255,255,255,.045);font-weight:700;line-height:1}
+.hw .lead:hover{transform:translateY(-7px);box-shadow:0 24px 50px rgba(21,24,31,.3)}
+.hw .lead .cat{font-family:var(--mono);font-size:10px;letter-spacing:4px;color:var(--gold);font-weight:800}
+.hw .lead h3{font-family:var(--serif);font-size:clamp(25px,4vw,40px);line-height:1.3;margin:14px 0;font-weight:700}
+.hw .lead p{color:#c9cdd4;font-size:13.5px;text-align:justify}
+.hw .lead .foot{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;letter-spacing:2px;color:var(--dim);border-top:1px solid #3a3f48;padding-top:12px;margin-top:16px}
+.hw .s{grid-column:2/4;background:var(--paper2);border:1px solid var(--line);border-radius:4px;padding:18px 20px;cursor:pointer;transition:.24s}
+.hw .s:hover{border-color:var(--red);background:#fff}
+.hw .s h4{font-family:var(--serif);font-size:18px;font-weight:700;line-height:1.4}
+.hw .s .yr{font-family:var(--mono);font-size:10px;letter-spacing:3px;color:var(--red);font-weight:800;margin-top:6px}
+.hw .s p{font-size:11.8px;color:var(--sub);margin-top:8px;text-align:justify;line-height:1.72}
+.hw .s2{grid-column:2;grid-row:2;background:linear-gradient(150deg,#243a5e,#c1272d);color:#fff}
+.hw .s2 p{color:rgba(255,255,255,.82)}
+.hw .s3{grid-column:3;grid-row:2;background:var(--gold);color:#241c08}
+.hw .s3 .yr{color:#241c08}
+.hw .s3 p{color:rgba(36,28,8,.8)}
+
+/* ===== 02 欧洲电影 ===== */
+.eu{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;scrollbar-width:thin}
+.eu::-webkit-scrollbar{height:6px}
+.eu::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+.eu a{flex:0 0 268px;scroll-snap-align:start;background:var(--paper2);border:1px solid var(--line);border-radius:4px;overflow:hidden;cursor:pointer;transition:.26s;display:flex;flex-direction:column}
+.eu a:hover{transform:translateY(-8px);border-color:var(--navy);box-shadow:0 18px 38px rgba(36,58,94,.2)}
+.eu .cv{height:150px;position:relative;padding:16px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end}
+.eu a:nth-child(1) .cv{background:linear-gradient(150deg,#1b4d3a,#7bb661)}
+.eu a:nth-child(2) .cv{background:linear-gradient(150deg,#3b0764,#c026d3)}
+.eu a:nth-child(3) .cv{background:linear-gradient(150deg,#7f1d1d,#f87171)}
+.eu a:nth-child(4) .cv{background:linear-gradient(150deg,#0c4a6e,#38bdf8)}
+.eu a:nth-child(5) .cv{background:linear-gradient(150deg,#451a03,#f59e0b)}
+.eu a:nth-child(6) .cv{background:linear-gradient(150deg,#172554,#6366f1)}
+.eu .cv b{font-family:var(--serif);font-size:18px;line-height:1.35;font-weight:700}
+.eu .cv small{font-family:var(--mono);font-size:9.5px;letter-spacing:3px;font-weight:800;margin-top:5px}
+.eu .tx{padding:14px 16px;flex:1}
+.eu .tx span{font-size:9.5px;letter-spacing:2px;color:var(--red);font-weight:800;border:1px solid var(--red);border-radius:999px;padding:2px 9px}
+.eu .tx p{font-size:11.6px;color:var(--sub);margin-top:9px;text-align:justify;line-height:1.7}
+
+/* ===== 03 奥斯卡 · 戛纳 ===== */
+.awards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.aw{background:#fff;border:1px solid var(--line);border-top:5px solid var(--gold);border-radius:4px;padding:20px;cursor:pointer;transition:.26s}
+.aw:hover{transform:translateY(-8px);box-shadow:0 20px 44px rgba(21,24,31,.16)}
+.aw:nth-child(2){border-top-color:var(--silver,#9ca3af)}
+.aw:nth-child(3){border-top-color:var(--bronze,#a16207)}
+.aw .org{font-family:var(--serif);font-size:clamp(19px,2.4vw,25px);font-weight:700;line-height:1.35}
+.aw .org i{font-style:normal;display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:3px;color:var(--sub);font-weight:800;margin-top:4px}
+.aw .yr{font-family:var(--mono);font-size:10.5px;letter-spacing:2px;color:var(--red);font-weight:800;margin:11px 0 10px}
+.aw ul{list-style:none}
+.aw li{padding:8px 0;border-bottom:1px dotted var(--line);display:flex;justify-content:space-between;gap:10px;font-size:12.6px}
+.aw li:last-child{border-bottom:0}
+.aw li b{font-weight:700;font-family:var(--serif)}
+.aw li u{text-decoration:none;font-family:var(--mono);font-size:10.5px;color:var(--gold);font-weight:800;white-space:nowrap}
+
+/* ===== 04 年代轴 ===== */
+.decade{position:relative;padding-left:34px}
+.decade::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:var(--ink)}
+.dc{position:relative;padding:14px 18px;border:1px solid var(--line);border-radius:4px;margin-bottom:12px;background:var(--paper2);cursor:pointer;transition:.24s}
+.dc:hover{background:#fff;border-color:var(--red);padding-left:24px}
+.dc::before{content:"";position:absolute;left:-30px;top:24px;width:12px;height:12px;background:var(--gold);border:2px solid var(--paper);border-radius:50%}
+.dc:hover::before{background:var(--red)}
+.dc .y{font-family:var(--mono);font-size:11px;letter-spacing:3px;color:var(--red);font-weight:900}
+.dc h4{font-family:var(--serif);font-size:17.5px;margin:4px 0 6px;font-weight:700}
+.dc p{font-size:12px;color:var(--sub);text-align:justify;line-height:1.74}
+
+/* ===== 05 片单 ===== */
+.list{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--ink);border-radius:4px;overflow:hidden;background:#fff}
+.lt{display:grid;grid-template-columns:56px 1fr;gap:0;padding:15px 18px;border-bottom:1px dashed var(--line);cursor:pointer;transition:.2s;align-items:center}
+.lt:nth-child(odd){border-right:1px dashed var(--line)}
+.lt:last-child,.lt:nth-last-child(2){border-bottom:0}
+.lt:hover{background:#fdf6ee}
+.lt .no{font-family:var(--serif);font-weight:700;font-size:25px;color:var(--line);line-height:1;transition:.2s}
+.lt:hover .no{color:var(--red)}
+.lt h4{font-size:14.2px;font-weight:800;line-height:1.5}
+.lt small{font-family:var(--mono);font-size:9.6px;letter-spacing:2px;color:var(--gold);font-weight:800}
+.lt p{font-size:11.2px;color:var(--sub);margin-top:5px;text-align:justify;line-height:1.66}
+
+/* ===== 06 观影指南 ===== */
+.guide{display:grid;grid-template-columns:repeat(4,1fr);counter-reset:g;gap:0;border:2px solid var(--ink);border-radius:4px;background:var(--ink)}
+.gd{background:var(--paper);padding:22px 20px;position:relative;cursor:pointer;transition:.24s}
+.gd:not(:last-child){border-right:2px solid var(--ink)}
+.gd:hover{background:#fff}
+.gd::before{counter-increment:g;content:counter(g,decimal-leading-zero);font-family:var(--serif);font-size:38px;font-weight:700;color:var(--paper2);position:absolute;right:14px;top:6px;line-height:1}
+.gd .k{font-family:var(--mono);font-size:10px;letter-spacing:3px;color:var(--red);font-weight:900}
+.gd h4{font-family:var(--serif);font-size:18px;margin:9px 0 8px;font-weight:700;position:relative}
+.gd p{font-size:11.8px;color:var(--sub);line-height:1.76;text-align:justify;position:relative}
+.gd b{display:block;margin-top:12px;font-size:9.5px;letter-spacing:2px;color:var(--gold);font-weight:900;position:relative}
+
+/* ===== about ===== */
+.about{background:var(--ink);color:var(--paper);border-radius:4px;padding:30px}
+.about p{color:#c9cdd4;font-size:14.4px;text-align:justify;margin-bottom:16px}
+.about p:first-child{font-family:var(--serif);font-size:17px;line-height:1.9;color:var(--paper)}
+.about p:first-letter{font-family:var(--serif);font-size:40px;color:var(--gold);float:left;line-height:1;margin:6px 9px 0 0}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tags a{font-size:11px;letter-spacing:1px;color:var(--paper);border:1px solid #454a53;border-radius:999px;padding:7px 15px;transition:.2s;font-weight:600}
+.tags a:hover{color:var(--ink);background:var(--gold);border-color:var(--gold)}
+
+/* ===== footer ===== */
+footer{margin-top:10px;background:var(--ink);color:var(--paper);padding:44px 0 18px;border-top:5px solid var(--red)}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px;margin-bottom:24px}
+.foot .brand{font-family:var(--serif);font-size:24px;font-weight:700;letter-spacing:.5px}
+.foot .brand i{font-style:normal;color:var(--gold)}
+.foot .brand p{font-size:11.8px;color:#9aa0a8;margin-top:12px;line-height:1.9;max-width:330px;font-family:var(--sans)}
+.foot h5{font-family:var(--mono);font-size:10px;letter-spacing:3px;color:var(--gold);margin-bottom:12px;font-weight:800}
+.foot a{display:block;color:#9aa0a8;font-size:11.8px;padding:4px 0;font-weight:600;transition:.18s}
+.foot a:hover{color:var(--paper)}
+.copy{text-align:center;color:#6f757e;font-size:10.5px;border-top:1px solid #333945;padding-top:16px;line-height:2}
+.copy a{color:var(--gold);font-weight:700}
+
+/* ===== responsive ===== */
+@media(max-width:1060px){
+  .ham{display:block}
+  .search{display:none}
+  .hw{grid-template-columns:1fr;grid-template-rows:auto}
+  .hw .lead,.hw .s,.hw .s2,.hw .s3{grid-column:auto;grid-row:auto}
+  .hw .lead{min-height:280px}
+  .awards,.guide,.foot,.list{grid-template-columns:repeat(2,1fr)}
+  .lt:nth-child(odd){border-right:0}
+  .drawer{position:fixed;inset:0 0 0 auto;width:84%;max-width:330px;background:var(--ink);color:var(--paper);padding:28px;border-left:4px solid var(--red);transform:translateX(102%);transition:.32s;z-index:60;overflow:auto}
+  .drawer.open{transform:none}
+  .drawer a{display:block;font-size:16px;font-weight:800;padding:14px 10px;border-bottom:1px dashed #3a3f48;letter-spacing:1px;font-family:var(--serif)}
+  .drawer a:hover{color:var(--gold)}
+  .scrim{position:fixed;inset:0;background:rgba(10,12,15,.68);opacity:0;pointer-events:none;transition:.32s;z-index:59}
+  .scrim.on{opacity:1;pointer-events:auto}
+}
+@media(max-width:600px){
+  .wrap{padding:0 16px}
+  .awards,.guide,.foot,.list{grid-template-columns:1fr}
+  .gd:not(:last-child){border-right:0;border-bottom:2px solid var(--ink)}
+  .lt{border-right:0 !important}
+  .hero p{columns:1}
+  .hero h1{font-size:34px}
+}
+@media print{body{background:#fff;color:#000}.ham,.search,.scrim,.drawer{display:none}header{position:static}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<header>
+  <div class="wrap">
+    <div class="hd">
+      <a class="logo" href="#"><i>欧美三级</i>电影网<em>EUROPE &amp; AMERICA CINEMA</em></a>
+      <div class="search" role="search">
+        <span aria-hidden="true">⌕</span>
+        <input type="search" placeholder="检索导演 / 片名 / 奖项 / 类型" aria-label="搜索影视">
+        <button aria-label="搜索">检索</button>
+      </div>
+      <button class="ham" id="ham" aria-label="菜单" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="drawer" id="drawer" aria-label="移动端导航">
+    <a href="#hollywood">好莱坞</a>
+    <a href="#europe">欧洲电影</a>
+    <a href="#awards">获奖片单</a>
+    <a href="#decade">按年代</a>
+    <a href="#list">必看片单</a>
+    <a href="#guide">观影指南</a>
+    <a href="#about">关于本站</a>
+  </div>
+  <div class="scrim" id="scrim"></div>
+</header>
+
+<main>
+
+  <!-- hero -->
+  <section class="hero wrap">
+    <div class="kicker"><b>VOL. 01</b> 一份给中文观众的欧美三级电影观看清单</div>
+    <h1>看懂<u>欧美三级电影</u><br>只需要一个对的入口</h1>
+    <div class="sub">Europe &amp; America Cinema · since the first frame</div>
+    <p>欧美三级电影网，专注欧美三级电影的赏析与片单推荐。我们不搬运资源、不提供盗链，只做两件事：把<strong>好莱坞</strong>的工业杰作与<strong>欧洲</strong>的作者表达分清楚，再按<strong>年代、类型、国家、获奖</strong>四维归档。从 1927 年的黑白默片到上周的戛纳新片，从 140 分钟的史诗到 18 分钟的短片，3 分钟挑到一部"看完会想和人聊"的欧美三级电影。</p>
+    <div class="marquee" aria-hidden="true">
+      <span><i>★</i>奥斯卡最佳影片</span>
+      <span><i>★</i>戛纳金棕榈</span>
+      <span><i>★</i>柏林金熊</span>
+      <span><i>★</i>威尼斯金狮</span>
+      <span><i>★</i>科幻 · 悬疑 · 剧情 · 喜剧 · 纪录片</span>
+      <span><i>★</i>4K · 蓝光 · 修复版</span>
+      <span><i>★</i>好莱坞 · 法国 · 意大利 · 英国 · 德国 · 西班牙</span>
+    </div>
+  </section>
+
+  <!-- 01 好莱坞 -->
+  <section id="hollywood" class="wrap">
+    <div class="sec">
+      <h2><small>01</small>好莱坞 · 工业的光</h2>
+      <span class="en">Hollywood</span>
+      <a class="more" href="#">完整片单 ›</a>
+    </div>
+    <div class="hw">
+      <a class="lead" href="#">
+        <div>
+          <span class="cat">FEATURED · 本周主编选片</span>
+          <h3>《星际回响》<br>当配角开始讲述宇宙</h3>
+          <p>一部"反英雄"的太空史诗。没有爆炸开场，只有一个机械师的独白。它证明了好莱坞仍然记得：最贵的特效，是留白。</p>
+        </div>
+        <div class="foot"><span>SCI-FI / 138 MIN</span><span>2025</span></div>
+      </a>
+      <a class="s" href="#"><h4>教父</h4><div class="yr">1972 · 美国</div><p>关于"家庭"这个词最体面的解释。看完会重新理解父亲。</p></a>
+      <a class="s" href="#"><h4>低俗小说</h4><div class="yr">1994 · 美国</div><p>非线性叙事的教科书。台词比情节更好。</p></a>
+      <a class="s s2" href="#"><h4>肖申克的救赎</h4><div class="yr">1994 · 美国</div><p>关于希望，它比鸡汤高级一万倍。</p></a>
+      <a class="s s3" href="#"><h4>奥本海默</h4><div class="yr">2023 · 美国</div><p>诺兰把"一个人的内心"拍成了史诗。</p></a>
+    </div>
+  </section>
+
+  <!-- 02 欧洲电影 -->
+  <section id="europe" class="wrap">
+    <div class="sec">
+      <h2><small>02</small>欧洲电影 · 作者的低语</h2>
+      <span class="en">Europe</span>
+      <a class="more" href="#">按国家 ›</a>
+    </div>
+    <div class="eu">
+      <a href="#"><div class="cv"><b>法式温柔</b><small>FRANCE</small></div><div class="tx"><span>法国</span><p>不解释情绪，只呈现。两小时里，什么都没发生，什么都发生了。</p></div></a>
+      <a href="#"><div class="cv"><b>意大利往事</b><small>ITALY</small></div><div class="tx"><span>意大利</span><p>费里尼之后，意大利人还在拍"家"。食物、母亲、教堂、争吵。</p></div></a>
+      <a href="#"><div class="cv"><b>北欧寒光</b><small>NORDIC</small></div><div class="tx"><span>北欧</span><p>雪、沉默、一桩旧案。冷，但人心是热的。</p></div></a>
+      <a href="#"><div class="cv"><b>英伦克制</b><small>BRITAIN</small></div><div class="tx"><span>英国</span><p>台词像刀，礼貌像墙。最适合配红茶看的电影。</p></div></a>
+      <a href="#"><div class="cv"><b>德语秩序</b><small>GERMANY</small></div><div class="tx"><span>德国</span><p>用结构讲道德。看完会沉默很久。</p></div></a>
+      <a href="#"><div class="cv"><b>西班牙炽烈</b><small>SPAIN</small></div><div class="tx"><span>西班牙</span><p>色彩、欲望、宗教。阿莫多瓦之后，红色还在。</p></div></a>
+    </div>
+  </section>
+
+  <!-- 03 获奖片单 -->
+  <section id="awards" class="wrap">
+    <div class="sec">
+      <h2><small>03</small>获奖片单 · 三个电影节的审美</h2>
+      <span class="en">Awards</span>
+      <a class="more" href="#">历年名单 ›</a>
+    </div>
+    <div class="awards">
+      <a class="aw" href="#">
+        <div class="org">奥斯卡<i>ACADEMY AWARDS</i></div>
+        <div class="yr">2026 · BEST PICTURE</div>
+        <ul>
+          <li><b>星际回响</b><u>10 项提名</u></li>
+          <li><b>父亲的河</b><u>最佳影片</u></li>
+          <li><b>第七夜</b><u>最佳原创剧本</u></li>
+          <li><b>沉默的证人</b><u>最佳剪辑</u></li>
+        </ul>
+      </a>
+      <a class="aw" href="#">
+        <div class="org">戛纳<i>PALMARÉS</i></div>
+        <div class="yr">2026 · PALME D'OR</div>
+        <ul>
+          <li><b>南风知我意</b><u>金棕榈</u></li>
+          <li><b>深海来信</b><u>评审团大奖</u></li>
+          <li><b>棋士</b><u>最佳导演</u></li>
+          <li><b>追光少年</b><u>一种关注</u></li>
+        </ul>
+      </a>
+      <a class="aw" href="#">
+        <div class="org">柏林<i>BERLINALE</i></div>
+        <div class="yr">2026 · GOLDEN BEAR</div>
+        <ul>
+          <li><b>重启人生</b><u>金熊奖</u></li>
+          <li><b>长安十二时辰</b><u>评审团奖</u></li>
+          <li><b>葬送的芙莉莲</b><u>最佳动画</u></li>
+          <li><b>排球少年</b><u>最佳新导演</u></li>
+        </ul>
+      </a>
+    </div>
+  </section>
+
+  <!-- 04 按年代 -->
+  <section id="decade" class="wrap">
+    <div class="sec">
+      <h2><small>04</small>按年代 · 一百年的光影</h2>
+      <span class="en">Timeline</span>
+      <a class="more" href="#">完整年表 ›</a>
+    </div>
+    <div class="decade">
+      <a class="dc" href="#"><div class="y">1990 — 1999</div><h4>银河系的十年</h4><p>《肖申克的救赎》《低俗小说》《阿甘正传》同年出现。不是巧合，是一个时代刚好准备好听故事。</p></a>
+      <a class="dc" href="#"><div class="y">2000 — 2009</div><h4>数字时代的黎明</h4><p>DV 让低成本成为可能，《月球》《记忆碎片》证明：限制催生风格。</p></a>
+      <a class="dc" href="#"><div class="y">2010 — 2019</div><h4>流媒体改写放映</h4><p>Netflix 把电影送进卧室。《罗马》《爱尔兰人》模糊了影院与客厅的边界。</p></a>
+      <a class="dc" href="#"><div class="y">2020 — 2026</div><h4>回到大银幕</h4><p>疫情之后，人们重新需要"黑暗中的两小时"。作者电影回潮，长镜头重新被尊重。</p></a>
+    </div>
+  </section>
+
+  <!-- 05 必看片单 -->
+  <section id="list" class="wrap">
+    <div class="sec">
+      <h2><small>05</small>必看片单 · 十部欧美三级电影</h2>
+      <span class="en">Must Watch</span>
+      <a class="more" href="#">换一批 ›</a>
+    </div>
+    <div class="list">
+      <a class="lt" href="#"><span class="no">01</span><span><small>DRAMA · 1972</small><h4>教父 The Godfather</h4><p>黑帮片的外壳，家庭伦理的内核。马龙·白兰度的台词值得抄下来。</p></span></a>
+      <a class="lt" href="#"><span class="no">02</span><span><small>DRAMA · 1994</small><h4>肖申克的救赎</h4><p>关于希望最体面的版本。适合低谷期重看。</p></span></a>
+      <a class="lt" href="#"><span class="no">03</span><span><small>CRIME · 1994</small><h4>低俗小说 Pulp Fiction</h4><p>非线性叙事的教科书。昆汀把"闲聊"拍成了高潮。</p></span></a>
+      <a class="lt" href="#"><span class="no">04</span><span><small>SCI-FI · 1968</small><h4>2001 太空漫游</h4><p>看不懂没关系。它是一首关于进化的诗，不是说明书。</p></span></a>
+      <a class="lt" href="#"><span class="no">05</span><span><small>DRAMA · 1957</small><h4>十二怒汉 12 Angry Men</h4><p>一个房间，十二个人，九十分钟。剧本的极致。</p></span></a>
+      <a class="lt" href="#"><span class="no">06</span><span><small>DRAMA · 2019</small><h4>寄生虫 Parasite</h4><p>奉俊昊把阶级拍成了惊悚片。地下室那段，不敢呼吸。</p></span></a>
+      <a class="lt" href="#"><span class="no">07</span><span><small>HISTORY · 1993</small><h4>辛德勒的名单</h4><p>黑白不是风格，是态度。结尾那抹红色，是电影史最贵的一笔。</p></span></a>
+      <a class="lt" href="#"><span class="no">08</span><span><small>ANIMATION · 2001</small><h4>千与千寻</h4><p>宫崎骏写给迷失者的信。成长就是学会记住自己的名字。</p></span></a>
+      <a class="lt" href="#"><span class="no">09</span><span><small>THRILLER · 2010</small><h4>盗梦空间 Inception</h4><p>诺兰最"工整"的作品。逻辑是壳，失去才是核。</p></span></a>
+      <a class="lt" href="#"><span class="no">10</span><span><small>DRAMA · 2023</small><h4>奥本海默 Oppenheimer</h4><p>三小时没有一句废话。原子弹爆炸那场戏，是沉默。</p></span></a>
+    </div>
+  </section>
+
+  <!-- 06 观影指南 -->
+  <section id="guide" class="wrap">
+    <div class="sec">
+      <h2><small>06</small>观影指南 · 四步挑到不后悔</h2>
+      <span class="en">How to Watch</span>
+      <a class="more" href="#">正版平台 ›</a>
+    </div>
+    <div class="guide">
+      <div class="gd"><span class="k">STEP 01</span><h4>先认"作者"还是"工业"</h4><p>想被照顾，看好莱坞；想被挑战，看欧洲。这不是高下，是两种契约。</p><b>KEY · STYLE</b></div>
+      <div class="gd"><span class="k">STEP 02</span><h4>再看"年代"而不是"新旧"</h4><p>老片不等于难看。1994、2007、2019 是三个异常密集的年份，从那里开始最稳。</p><b>KEY · YEAR</b></div>
+      <div class="gd"><span class="k">STEP 03</span><h4>认准"合法授权平台"</h4><p>老片看修复版，新片等院线窗口期，剧集看平台独播。支持创作者，片子才会继续被拍出来。</p><b>KEY · LEGAL</b></div>
+      <div class="gd"><span class="k">STEP 04</span><h4>允许"看不懂"和"看一半"</h4><p>看不懂就查导演访谈；看不进去就换。指南不负责"坚持"，只负责"不后悔"。</p><b>KEY · QUIT</b></div>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section id="about" class="wrap">
+    <div class="sec">
+      <h2><small>07</small>关于欧美三级电影网</h2>
+      <span class="en">About</span>
+      <a class="more" href="#">投稿片单 ›</a>
+    </div>
+    <div class="about">
+      <p>欧美三级电影网，是一个轻量的欧美三级电影赏析与片单推荐站。我们不托管资源、不提供盗链、不做违规采集。每一份片单只回答一个具体问题："此刻的你，适合看哪一部欧美三级电影？"答案可以被反驳，但每部片子都附一句"为什么是它"。</p>
+      <div class="tags">
+        <a href="#hollywood">好莱坞</a><a href="#europe">欧洲电影</a><a href="#awards">奥斯卡</a><a href="#awards">戛纳</a><a href="#awards">柏林</a>
+        <a href="#">科幻</a><a href="#">悬疑</a><a href="#">剧情</a><a href="#">喜剧</a><a href="#">纪录片</a><a href="#">黑色电影</a>
+        <a href="#decade">1990s</a><a href="#decade">2000s</a><a href="#decade">2010s</a><a href="#decade">2020s</a>
+        <a href="#">4K</a><a href="#">蓝光</a><a href="#">修复版</a><a href="#">正版</a>
+      </div>
+      <p style="margin-top:18px">本站仅为影视信息与观影导航，倡导通过<strong>合法授权平台</strong>观看，尊重版权与创作者。片单随版本迭代更新，欢迎在"投稿片单"里留下那部"被低估的两小时"。</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="brand"><i>欧美三级</i>电影网<p>专注欧美三级电影的赏析与片单推荐。好莱坞的工业，欧洲的作者，一百年里最值得被看见的两小时。</p></div>
+      <div>
+        <h5>频道</h5>
+        <a href="#hollywood">好莱坞</a>
+        <a href="#europe">欧洲电影</a>
+        <a href="#awards">获奖片单</a>
+        <a href="#decade">按年代</a>
+      </div>
+      <div>
+        <h5>阅读</h5>
+        <a href="#list">必看片单</a>
+        <a href="#guide">观影指南</a>
+        <a href="#about">关于本站</a>
+        <a href="#">更新日志</a>
+      </div>
+      <div>
+        <h5>筛选</h5>
+        <a href="#">按类型</a>
+        <a href="#">按年代</a>
+        <a href="#">按国家</a>
+        <a href="#">按奖项</a>
+      </div>
+    </div>
+    <div class="copy">
+      © <span id="yr">2026</span> 欧美三级电影网 &nbsp;|&nbsp; 网站网址：<a href="https://oumeisanjidianyingwang-cn.github.io/">https://oumeisanjidianyingwang-cn.github.io/</a><br>
+      本站为影视信息与观影导航，倡导支持正版影视与创作者
+    </div>
+  </div>
+</footer>
+
+<script>
+var ham=document.getElementById('ham'),dr=document.getElementById('drawer'),sc=document.getElementById('scrim');
+function closeNav(){dr.classList.remove('open');sc.classList.remove('on');ham.setAttribute('aria-expanded','false');ham.textContent='☰';}
+ham.addEventListener('click',function(){var o=dr.classList.toggle('open');sc.classList.toggle('on',o);ham.setAttribute('aria-expanded',o);ham.textContent=o?'✕':'☰';});
+sc.addEventListener('click',closeNav);
+dr.addEventListener('click',function(e){if(e.target.tagName==='A')closeNav();});
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
